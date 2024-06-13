@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { StylesProvider, createGenerateClassName } from "@material-ui/core";
 
 import MarketingApp from "./components/MarketingApp";
@@ -11,10 +11,13 @@ const generateClassName = createGenerateClassName({
 export default () => {
   return (
     <StylesProvider generateClassName={generateClassName}>
-      <Router>
+      <BrowserRouter>
         <Header />
         <MarketingApp />
-      </Router>
+        {/* <Switch>
+          <Route exact path="/" component={MarketingApp} />
+        </Switch> */}
+      </BrowserRouter>
     </StylesProvider>
   );
 };
