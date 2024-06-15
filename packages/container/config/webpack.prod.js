@@ -17,7 +17,7 @@ const productionConfig = {
       filename: "remoteEntry.js",
       remotes: {
         auth: `auth@${domain}/auth/latest/remoteEntry.js`,
-        dashboard: `dashboard@${domain}/auth/latest/remoteEntry.js`,
+        dashboard: `dashboard@${domain}/dashboard/latest/remoteEntry.js`,
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
